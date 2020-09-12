@@ -6,45 +6,78 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>          
-        <a>
-          <img src="img/logo.svg" width="138" height="70" alt="Логотип City of Sedona">
-        </a>
-        <nav>
-          <ul>
-            <li><a href="blank.html">Информация</a></li>
-            <li><a href="blank.html">Фото и видео</a></li>
-            <li><a href="blank.html">Карта штата</a></li>
-            <li><a href="hotels.html">Гостиницы</a></li>
-          </ul>
-        </nav>
-      </header>
-  <form action="#" method="get">
-    <fieldset>
-      <section>
-        <legend>Инфраструктура:</legend>
-        <label><input type="checkbox" name="area" checked value="Бассейн">Бассейн</label>
-        <label><input type="checkbox" name="area" value="Парковка">Парковка</label>
-        <label><input type="checkbox" name="area" value="Wi-Fi">Wi-Fi</label>
-      </section>
-    </fieldset>
-    <fieldset>
-      <section>
-        <legend>Тип жилья:</legend>
-        <label><input type="checkbox" name="area" checked value="Гостиница">Гостиница</label>
-        <label><input type="checkbox" name="area" checked value="Мотель">Мотель</label>
-        <label><input type="checkbox" name="area" checked value="Аппартаменты">Аппартаменты</label>
-      </section>
-    </fieldset>
-    <fieldset>
-      <section>
-        <legend>Стоимость в сутки:</legend>
-        <label><input type="text" placeholder="от 0"></label>
-        <label><input type="text" placeholder="до 3000"></label>
-        <label><input type="range" min="0" max="3000"></label>
-      </section>
-    </fieldset>
-  </form>
+  <header>          
+    <a>
+      <img src="img/logo.svg" width="138" height="70" alt="Логотип City of Sedona">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="blank.html">Информация</a></li>
+        <li><a href="blank.html">Фото и видео</a></li>
+        <li><a href="blank.html">Карта штата</a></li>
+        <li><a href="hotels.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Фильтр гостиниц</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <section>
+            <legend>Инфраструктура:</legend>
+            <label><input type="checkbox" name="area" checked value="Бассейн">Бассейн</label>
+            <label><input type="checkbox" name="area" value="Парковка">Парковка</label>
+            <label><input type="checkbox" name="area" value="Wi-Fi">Wi-Fi</label>
+          </section>
+        </fieldset>
+        <fieldset>
+          <section>
+            <legend>Тип жилья:</legend>
+            <label><input type="checkbox" name="area" checked value="Гостиница">Гостиница</label>
+            <label><input type="checkbox" name="area" checked value="Мотель">Мотель</label>
+            <label><input type="checkbox" name="area" checked value="Аппартаменты">Аппартаменты</label>
+          </section>
+        </fieldset>
+        <fieldset>
+          <section>
+            <legend>Стоимость в сутки:</legend>
+            <label><input type="text" placeholder="от 0"></label>
+            <label><input type="text" placeholder="до 3000"></label>
+            <label><input type="range" min="0" max="3000" step="1"></label>
+            <button type="button">Показать</button>
+          </section>
+        </fieldset>
+      </form>
+    </section>
+    <!--Здесь будет НАЙДЕНО и форма сортировки-->
+    <section>
+      <h2>Список гостиниц</h2>
+      <ul>
+        <li>
+          <h3>Amara Resort & SPA</h3>
+          <p>Гостиница</p>
+          <p>от 4000 р.</p>
+          <button type="button">Подробнее</button>
+          <button type="button">Забронировать</button>
+        </li>
+        <li>
+          <h3>Desert Quail Inn</h3>
+          <p>Мотель</p>
+          <p>от 3000 р.</p>
+          <button type="button">Подробнее</button>
+          <button type="button">Забронировать</button>
+        </li>
+        <li>
+          <h3>Villas at Poco Diablo</h3>
+          <p>Аппартаменты</p>
+          <p>от 2000 р.</p>
+          <button type="button">Подробнее</button>
+          <button type="button">Забронировать</button>
+        </li>
+      </ul>
+    </section>
+  </main>
   <footer>
     <section>
       <h2>Контакты</h2>
@@ -53,14 +86,16 @@
     </section>
     <section>
       <h2>Соц.сети</h2>
-      <a href="#">Twitter</a>
-      <a href="#">Facebook</a>
-      <a href="#">Youtube</a>
+      <ul>
+        <li><a href="#"><img src="img/twitter.svg"width="46" height="48" alt="Twitter"></a></li>
+        <li><a href="#"><img src="img/facebook.svg" width="46" height="48" alt="Facebook"></a></li>
+        <li><a href="#"><img src="img/youtube.svg" width="46" height="48" alt="Youtube"></a></li>
+      </ul>
     </section>
-    <section>
+  <section>
         <p>Website by</p>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="#" alt="Логотип HTMLAcademy">
+          <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTMLAcademy">
         </a>
       </section>
   </footer>
