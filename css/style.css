@@ -1,0 +1,166 @@
+/* Variables */
+:root {
+  --white: #ffffff;
+  --black: #000000; /* цвет заголовков */
+  --light-black: #333333; /* цвет преимуществ */
+  --gray: #EEEEEE;
+  --gray-4: #F2F2F2; /* заливка рейтинга */
+  --gray-5: #A9A9A9;
+  --gray-6: #888888;
+  --blue: #81B3D2; /* кнопка Подробнее, фильтр "по цене" */
+  --blue-2: #669EC0; /* наведение на кнопку Подробнее */
+  --blue-3: #5496BD; /* нажатие на кнопку Подробнее */
+  --brown: #766357; /* пункт меню Гостиницы в hotels, кнопка Забронировать, Поиск гостиницы в седоне */
+  --brown-2:  #604E43; /* наведение на кнопку Забронировать */
+  --brown-3: #503E33; /* нажатие на кнопку Забронировать */
+  --transparent-white: rgba(255, 255, 255, 0.9); /* фон footer */
+  --transparent-black: rgba (0, 0, 0, 0.3);
+}
+
+.page-wrap {
+  background-color: var(--white)
+}
+
+.page-body{
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--light-black);
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: #F2F2F2;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+} /* отвечает за скрытие заголовков h1 h2 */
+
+/* Header */
+.navigation-item a {
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation-item a:hover {
+  color: var(--blue);
+}
+
+.navigation-item a:active {
+  color: var(--transparent-black);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+/* Feature */
+
+.feature-item {
+  list-style: none;
+  color: var(--white);
+}
+
+.slogan-title {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.slogan-text {
+  line-height: 26px;
+}
+
+.features-list {
+  background-color: var(--white);
+}
+
+.blue {
+  width: 400px;
+  padding-top: 48px; 
+  text-align: center;
+  background: #81b3d2;
+  color: white;
+}
+  .advice-list {
+    color: var(--black);
+    background-color: var(--white);
+    list-style: none;
+  }
+
+.item-title {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.item-number {
+  color: var(--black);
+}
+
+.item-text {
+  color: var(--black);
+}
+
+.search-title {
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.search-text {
+  line-height: 24px;
+}
+
+.buttons {
+
+}
+
+.search-button {
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--white);
+  text-decoration: none;
+  background-color: #766357;
+}
+
+.search-button:hover {
+  background-color: #604E43;
+}
+
+.search-button:active {
+  background-color: #503E33;
+  color: var(--transparent-black);
+}
+
+.footer-contacts {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.footer-social {
+  list-style: none;
+}
+
+.contacts-phone a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.hashtag {
+  text-decoration: none;
+}
+
+.text-copyright {
+  line-height: 26px;
+  color: var(--black);
+}
