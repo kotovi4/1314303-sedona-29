@@ -1,166 +1,181 @@
 /* Variables */
+
 :root {
-  --white: #ffffff;
-  --black: #000000; /* цвет заголовков */
-  --light-black: #333333; /* цвет преимуществ */
-  --gray: #EEEEEE;
-  --gray-4: #F2F2F2; /* заливка рейтинга */
-  --gray-5: #A9A9A9;
-  --gray-6: #888888;
-  --blue: #81B3D2; /* кнопка Подробнее, фильтр "по цене" */
-  --blue-2: #669EC0; /* наведение на кнопку Подробнее */
-  --blue-3: #5496BD; /* нажатие на кнопку Подробнее */
-  --brown: #766357; /* пункт меню Гостиницы в hotels, кнопка Забронировать, Поиск гостиницы в седоне */
-  --brown-2:  #604E43; /* наведение на кнопку Забронировать */
-  --brown-3: #503E33; /* нажатие на кнопку Забронировать */
-  --transparent-white: rgba(255, 255, 255, 0.9); /* фон footer */
-  --transparent-black: rgba (0, 0, 0, 0.3);
+  --base-white: #ffffff;
+  --black-title: #000000;
+  --base-black: #333333;
+  --advice-bg: #eeeeee;
+  --rating-bg: #f2f2f2;
+  --search-parameter: #a9a9a9;
+  --page-bg: #888888;
+  --base-blue: #81b3d2;
+  --detail-hover: #669ec0;
+  --detail-activ: #5496bd;
+  --base-brown: #766357;
+  --search-hover:  #604e43;
+  --search-active: #503e33;
+  --footer-bg: rgba(255, 255, 255, 0.9); /* фон footer */
+  --navigation-active: rgba (0, 0, 0, 0.3);
 }
 
-.page-wrap {
-  background-color: var(--white)
+/*Global */
+
+img { 
+  max-width: 100%; 
 }
 
-.page-body{
+a { 
+  text-decoration: none; 
+}
+
+/* Body */
+
+.page-body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
-  color: var(--light-black);
-  text-transform: uppercase;
   font-weight: 400;
+  color: var(--base-black);
   background-color: #F2F2F2;
+  text-transform: uppercase;
 }
 
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-} /* отвечает за скрытие заголовков h1 h2 */
-
 /* Header */
+
+.navigation {
+  list-style: none;
+}
+
 .navigation-item a {
-  font-size: 14px;
+  font-weight: 700;
+  color: var(--black-title);
   line-height: 26px;
-  color: #000000;
   text-decoration: none;
 }
 
 .navigation-item a:hover {
-  color: var(--blue);
+  color: var(--navigation-hover);
 }
 
 .navigation-item a:active {
-  color: var(--transparent-black);
-}
-
-.site-navigation {
-  list-style: none;
+  color: var(--navigation-active);
 }
 
 /* Feature */
 
-.feature-item {
+.feature {
+  color: var(--base-white);
   list-style: none;
-  color: var(--white);
 }
 
-.slogan-title {
+.features-title {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: var(--black);
+  color: var(--black-title);
 }
 
-.slogan-text {
+.features-text {
   line-height: 26px;
 }
 
 .features-list {
-  background-color: var(--white);
+  background-color: var(--base-white);
 }
 
-.blue {
-  width: 400px;
-  padding-top: 48px; 
+.feature-box {
+  color: var(--base-white);
   text-align: center;
   background: #81b3d2;
-  color: white;
 }
-  .advice-list {
-    color: var(--black);
-    background-color: var(--white);
-    list-style: none;
-  }
 
-.item-title {
+.advice-list {
+  color: var(--black-title);
+  background-color: var(--base-white);
+  list-style: none;
+}
+
+.feature-title {
   font-size: 21px;
   font-weight: 700;
-  color: var(--black);
+  color: var(--black-title);
 }
 
-.item-number {
-  color: var(--black);
+.feature-number {
+  color: var(--black-title);
 }
 
-.item-text {
-  color: var(--black);
+.feature-text {
+  color: var(--black-title);
 }
+
+/* Search */
 
 .search-title {
   font-size: 30px;
   line-height: 24px;
   font-weight: 700;
-  color: var(--black);
+  color: var(--black-title);
 }
 
 .search-text {
   line-height: 24px;
 }
 
-.buttons {
-
-}
-
 .search-button {
   font-size: 21px;
   line-height: 26px;
-  color: var(--white);
-  text-decoration: none;
-  background-color: #766357;
+  color: var(--base-white);
+  background-color: var(--base-brown);
 }
 
 .search-button:hover {
-  background-color: #604E43;
+  background-color: var(--search-hover);
 }
 
 .search-button:active {
-  background-color: #503E33;
+  background-color: var(--search-active);
   color: var(--transparent-black);
 }
+
+/* Footer */
 
 .footer-contacts {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: var(--black);
+  color: var(--black-title);
 }
 
 .footer-social {
   list-style: none;
+  text-align: center;
 }
 
-.contacts-phone a {
-  color: var(--black);
-  text-decoration: none;
+.footer-phone a {
+  color: var(--black-title);
 }
 
-.hashtag {
+.footer-hashtag {
   text-decoration: none;
 }
 
 .text-copyright {
   line-height: 26px;
-  color: var(--black);
+  color: var(--black-title);
 }
+
+.page-footer {
+  background: var(--transparent-white);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+} /* отвечает за скрытие заголовков h1 h2 */
