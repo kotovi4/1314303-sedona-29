@@ -16,6 +16,9 @@
   --search-active: #503e33;
   --footer-bg: rgba(255, 255, 255, 0.9); /* фон footer */
   --navigation-active: rgba (0, 0, 0, 0.3);
+  --transparent-white: rgba(255, 255, 255, 0.3);
+  --rating: #666666;
+  --line-module-hotel: #e5e5e5;
 }
 
 /*Global */
@@ -30,13 +33,24 @@ a {
 
 /* Body */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+} /* отвечает за скрытие заголовков h1 h2 */
+
 .page-body {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: var(--base-black);
-  background-color: #F2F2F2;
+  background-color: var(--page-bg);
   text-transform: uppercase;
 }
 
@@ -50,11 +64,10 @@ a {
   font-weight: 700;
   color: var(--black-title);
   line-height: 26px;
-  text-decoration: none;
 }
 
 .navigation-item a:hover {
-  color: var(--navigation-hover);
+  color: var(--base-blue);
 }
 
 .navigation-item a:active {
@@ -62,9 +75,14 @@ a {
 }
 
 /* Feature */
+.main-header,
+.container,
+.catalog,
+.features {
+  background-color: var(--base-white);
+}
 
 .feature {
-  color: var(--base-white);
   list-style: none;
 }
 
@@ -72,27 +90,32 @@ a {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
   color: var(--black-title);
 }
 
 .features-text {
-  line-height: 26px;
-}
-
-.features-list {
-  background-color: var(--base-white);
+  text-align: center;
 }
 
 .feature-box {
   color: var(--base-white);
   text-align: center;
-  background: #81b3d2;
+  background-color: var(--base-blue);
 }
 
 .advice-list {
-  color: var(--black-title);
-  background-color: var(--base-white);
+  /* color: var(--black-title);
+  background-color: var(--base-white); */
+  background-image: url("../img/pattern-light.jpg");
+  background-position: center, 0 0;
+  background-repeat: no-repeat, repeat;
   list-style: none;
+}
+
+.advice-list h4 {
+  font-size: 21px;
+  line-height: 21px;
 }
 
 .feature-title {
@@ -107,9 +130,13 @@ a {
 
 .feature-text {
   color: var(--black-title);
+  line-height: 24px;
 }
 
 /* Search */
+.search-hotels {
+  text-align: center;
+}
 
 .search-title {
   font-size: 30px;
@@ -169,13 +196,99 @@ a {
   background: var(--transparent-white);
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0)
-} /* отвечает за скрытие заголовков h1 h2 */
+
+/* hotels form */
+
+.search-result {
+  list-style: none;
+}
+
+.results {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--black-title);
+}
+
+.filters-list li {
+  list-style: none;
+}
+
+.filters {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--black-title);
+}
+
+.filter-name {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--navigation-active);
+  text-decoration: none;
+}
+
+.filter-name:hover {
+  color: var(--base-blue);
+}
+
+.filter-name:active {
+  color: var(--base-black);
+}
+
+.hotels-list li {
+  list-style: none;
+}
+
+.hotel-rating {
+  color: var(--rating);
+  background-color: var(--rating-bg);
+}
+
+.hotel-link {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--base-title);
+}
+
+.hotel-link:hover{
+  color: var(--base-blue);
+}
+
+.hotel-link:active {
+  color: var(--navigation-active);
+}
+
+/* button */
+
+.button {
+  font-weight: 700;
+  color: var(--base-white);
+  text-decoration: none;
+  background-color: var(--base-brown);
+}
+
+.button:hover {
+  background-color: var(--search-hover);
+}
+
+.button:active {
+  color: var(--transparent-white);
+  background-color: var(--search-active);
+}
+
+.button-detail {
+  font-weight: 700;
+  color: var(--base-white);
+  text-decoration: none;
+  background-color: var(--base-blue);
+}
+
+.button-detail:hover {
+  background-color: var(--detail-hover);
+}
+
+.button-detail:active {
+  background-color: var(--detail-activ);
+}
