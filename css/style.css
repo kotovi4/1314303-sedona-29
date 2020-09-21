@@ -6,19 +6,19 @@
   --base-black: #333333;
   --advice-bg: #eeeeee;
   --rating-bg: #f2f2f2;
-  --search-parameter: #a9a9a9;
+  --search-parameter-color: #a9a9a9;
   --page-bg: #888888;
   --base-blue: #81b3d2;
-  --detail-hover: #669ec0;
-  --detail-activ: #5496bd;
+  --detail-hover-color: #669ec0;
+  --detail-activ-color: #5496bd;
   --base-brown: #766357;
-  --search-hover:  #604e43;
-  --search-active: #503e33;
+  --search-hover-color:  #604e43;
+  --search-active-color: #503e33;
   --footer-bg: rgba(255, 255, 255, 0.9); /* фон footer */
-  --navigation-active: rgba (0, 0, 0, 0.3);
+  --navigation-active-color: rgba (0, 0, 0, 0.3);
   --transparent-white: rgba(255, 255, 255, 0.3);
-  --rating: #666666;
-  --line-module-hotel: #e5e5e5;
+  --rating-color: #666666;
+  --line-module-color: #e5e5e5;
 }
 
 /*Global */
@@ -71,7 +71,7 @@ a {
 }
 
 .navigation-item a:active {
-  color: var(--navigation-active);
+  color: var(--navigation-active-color);
 }
 
 /* Feature */
@@ -157,11 +157,11 @@ a {
 }
 
 .search-button:hover {
-  background-color: var(--search-hover);
+  background-color: var(--search-hover-color);
 }
 
 .search-button:active {
-  background-color: var(--search-active);
+  background-color: var(--search-active-color);
   color: var(--transparent-black);
 }
 
@@ -224,7 +224,7 @@ a {
 .filter-name {
   font-size: 12px;
   line-height: 18px;
-  color: var(--navigation-active);
+  color: var(--navigation-active-color);
   text-decoration: none;
 }
 
@@ -241,7 +241,7 @@ a {
 }
 
 .hotel-rating {
-  color: var(--rating);
+  color: var(--rating-color);
   background-color: var(--rating-bg);
 }
 
@@ -257,7 +257,7 @@ a {
 }
 
 .hotel-link:active {
-  color: var(--navigation-active);
+  color: var(--navigation-active-color);
 }
 
 /* button */
@@ -270,12 +270,12 @@ a {
 }
 
 .button:hover {
-  background-color: var(--search-hover);
+  background-color: var(--search-hover-color);
 }
 
 .button:active {
   color: var(--transparent-white);
-  background-color: var(--search-active);
+  background-color: var(--search-active-color);
 }
 
 .button-detail {
@@ -286,9 +286,9 @@ a {
 }
 
 .button-detail:hover {
-  background-color: var(--detail-hover);
+  background-color: var(--detail-hover-color);
 }
 
 .button-detail:active {
-  background-color: var(--detail-activ);
+  background-color: var(--detail-activ-color);
 }
