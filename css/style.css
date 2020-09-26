@@ -74,7 +74,14 @@ a {
   color: var(--navigation-active-color);
 }
 
+.navigation .active,
+.navigation .active:hover,
+.navigation .active:focus,
+.navigation .active:active {
+  color: var(--base-brown);
+}
 /* Feature */
+
 .main-header,
 .container,
 .catalog,
@@ -99,17 +106,16 @@ a {
 }
 
 .feature-box {
-  color: var(--base-white);
   text-align: center;
   background-color: var(--base-blue);
 }
 
+.feature-box h3,
+.feature-box p {
+  color: var(--base-white)
+}
+
 .advice-list {
-  /* color: var(--black-title);
-  background-color: var(--base-white); */
-  background-image: url("../img/pattern-light.jpg");
-  background-position: center, 0 0;
-  background-repeat: no-repeat, repeat;
   list-style: none;
 }
 
@@ -134,6 +140,7 @@ a {
 }
 
 /* Search */
+
 .search-hotels {
   text-align: center;
 }
@@ -196,6 +203,13 @@ a {
   background: var(--transparent-white);
 }
 
+.logo-image:hover {
+  fill: var(--blue-50);
+}
+
+.logo-image:active {
+  fill: var(--grey-270);
+}
 
 /* hotels form */
 
@@ -292,3 +306,4 @@ a {
 .button-detail:active {
   background-color: var(--detail-activ-color);
 }
+
