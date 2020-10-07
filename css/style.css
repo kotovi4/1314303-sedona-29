@@ -19,7 +19,7 @@
   --transparent-white: rgba(255, 255, 255, 0.3);
   --rating-color: #666666;
   --line-module-color: #e5e5e5;
-  --activ-footer-logo: #bdbbbc;
+  --active-footer-logo: #bdbbbc;
 }
 
 /*Global */
@@ -282,14 +282,9 @@ a {
 
 .main-footer {
   display: grid;
-  grid-template-columns: 1fr;
-  height: 120px;
-}
-
-.footer-container {
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
+  height: 120px;
   margin: 0px;
   padding: 0px;
   text-align: center;
@@ -333,10 +328,15 @@ a {
 }
 
 .logo-image:active {
-  fill: var(--activ-footer-logo);
+  fill: var(--active-footer-logo);
 }
 
 /* hotels form */
+
+.form-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 .search-result {
   list-style: none;
@@ -347,6 +347,7 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: var(--black-title);
+  margin: 20px;
 }
 
 .filters-list li {
@@ -375,13 +376,86 @@ a {
   color: var(--base-black);
 }
 
-.hotels-list li {
+.filters-wrap {
+  display: flex;
+  align-items: center;
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
+.filters-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 10px;
+  column-gap: 10px;
   list-style: none;
 }
 
+.sort-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  list-style: none;
+}
+
+.hotels-list {
+  display: grid;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.hotel {
+  display: grid;
+  grid-template-columns: 135px 1fr 120px;
+  column-gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid var(--line-module-color);
+}
+
+.hotel-image {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+
+.hotel-name {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-content: center;
+}
+
+.hotel-text-wrap {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: 0px;
+}
+
+.hotel-bottons {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
 .hotel-rating {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  margin: 0px;
+  padding: 0px;
   color: var(--rating-color);
   background-color: var(--rating-bg);
+}
+.hotel-stars {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  margin: 0px;
+  padding: 0px;
+
 }
 
 .hotel-link {
