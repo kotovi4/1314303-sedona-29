@@ -147,7 +147,7 @@ a {
 
 /* Features */
 
-.intro {
+.features-intro {
   display: grid;
   grid-template-columns: 1fr;
   height: 272px;
@@ -206,6 +206,23 @@ a {
   color: var(--base-white);
 }
 
+.feature-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.feature-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row-reverse;
+}
+
+.text-wrapper {
+  display: block;
+  align-items: center;
+  margin: auto;
+}
+
 .feature-title,
 .advantage-title {
   font-size: 21px;
@@ -261,6 +278,7 @@ a {
   width: 568px;
   height: 86px;
   margin-left: 316px;
+  text-align: center;
   color: var(--base-white);
   background-color: var(--base-brown);
 }
@@ -284,7 +302,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
-  height: 120px;
+  min-height: max-content;
   margin: 0px;
   padding: 0px;
   text-align: center;
@@ -299,10 +317,42 @@ a {
 }
 
 .footer-social {
-  width: 150;
-  justify-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
-  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.social-item {
+  margin-right: 5px;
+}
+
+.social-item:last-child {
+  margin-right: 0px;
+}
+
+.social-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+  background-color: var(--base-blue)
+}
+
+.social-button:hover {
+  background-color: var(--detail-hover-color);
+}
+
+.social-button:active {
+  background-color: var(--detail-activ-color);
+}
+
+.social-button:active svg {
+  opacity: 0.3;
 }
 
 .footer-phone a {
@@ -321,6 +371,9 @@ a {
 .footer-logo {
   max-width: 197px;
   margin: 0;
+}
+.logo-image {
+  vertical-align: middle;
 }
 
 .logo-image:hover {
