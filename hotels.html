@@ -27,76 +27,66 @@
       <main class="catalog">
         <h1 class="visually-hidden">Страница выбора отелей</h1>
         
-        <section class="form-filters">
-          <h2 class="visually-hidden">Фильтр гостиниц</h2>
-          <form action="http://echo.htmlacademy.ru/" method="get">
-            
-            <fieldset class="form-filter">
-                <legend>Инфраструктура:</legend>
-                <ul>
-                  <li>
-                    <label for="pool-field">Бассейн</label>
-                    <input type="checkbox" id="pool-field" name="area" value="pool-field" checked>
-                  </li>
-                  <li>
-                    <label for="parking-field">Парковка</label>
-                    <input type="checkbox" id="parking-field" name="area" value="parking-field">
-                  </li>
-                  <li>
-                    <label for="wifi-field">Wi-Fi</label>
-                    <input type="checkbox" id="wifi-field" name="area" value="ifi-field">
-                  </li>
-                </ul>
-            </fieldset>
-
-            <fieldset class="form-filter">
-                <legend>Тип жилья:</legend>
-                <ul>
-                  <li>
-                    <label for="hotel-field">Гостиница</label>
-                    <input type="checkbox" id="hotel-field" name="area" value="hotel-field" checked>
-                  </li>
-                  <li>
-                    <label for="motel-field">Мотель</label>
-                    <input type="checkbox" id="motel-field" name="area" value="motel-field" checked>
-                  </li>
-                  <li>
-                    <label for="apartments-field">Аппартаменты</label>
-                    <input type="checkbox" id="apartments-field" name="area" value="apartments-field" checked>
-                  </li>
-                </ul>
-            </fieldset>
-
-            <fieldset class="form-filter">
-              <legend>Стоимость в сутки:</legend>
-              <ul>
-                <li>
-                  <label for=""></label>
-                  <input type="text" id="" placeholder="от 0"> 
+        <form class="filter-form" action="http://echo.htmlacademy.ru/" method="get">
+          
+          <fieldset class="filter-group">
+              <legend class="name-title">Инфраструктура:</legend>
+              <ul class="group-list">
+                <li class="group-item">
+                  <label for="pool-field">Бассейн</label>
+                  <input type="checkbox" id="pool-field" name="area" value="pool-field" checked>
                 </li>
-                <li>
-                  <label for=""></label>
-                  <input type="text" id="" placeholder="до 3000">
+                <li class="group-item">
+                  <label for="parking-field">Парковка</label>
+                  <input type="checkbox" id="parking-field" name="area" value="parking-field">
                 </li>
-                <li>
-                  <label for=""></label>
-                  <input type="range" id="" min="0" max="3000" step="1">
+                <li class="group-item">
+                  <label for="wifi-field">Wi-Fi</label>
+                  <input type="checkbox" id="wifi-field" name="area" value="ifi-field">
                 </li>
               </ul>
-            </fieldset>
+          </fieldset>
 
-            <a class="button-show" href="https://echo.htmlacademy.ru/">Показать</a>
+          <fieldset class="filter-group">
+              <legend class="name-title">Тип жилья:</legend>
+              <ul class="group-list">
+                <li class="group-item">
+                  <label for="hotel-field">Гостиница</label>
+                  <input type="checkbox" id="hotel-field" name="area" value="hotel-field" checked>
+                </li>
+                <li class="group-item">
+                  <label for="motel-field">Мотель</label>
+                  <input type="checkbox" id="motel-field" name="area" value="motel-field" checked>
+                </li>
+                <li class="group-item">
+                  <label for="apartments-field">Аппартаменты</label>
+                  <input type="checkbox" id="apartments-field" name="area" value="apartments-field" checked>
+                </li>
+              </ul>
+          </fieldset>
           
-          </form>
-        </section>
+          <fialdset class="filter-price">
+            <legend class="name-title">Стоимость в сутки (Р):</legend>
+            <div class="price-controls">
+              <label class="min-price">от
+                <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">до
+                <input type="number" name="max-price" value="3000">
+              </label>
+            </div>
+            <button class="button-hotels" type="submit" name="button-hotels">Показать</button>
+          </fialdset>
+        </form>
+        
         <section class="search-result">
           <h2 class="visually-hidden">Результаты поиска</h2>
           <div class="filters-wrap">
-            <p class="results">Найдено:3</p>
+            <p class="results">Найдено: 3</p>
             <p class="filters">Сортировка:</p>
             <ul class="filters-list">
               <li class="filter">
-                <a class="filter-name">По цене</a>
+                <a class="filter-name active">По цене</a>
               </li>
               <li class="filter">
                 <a class="filter-name" href="#">По типу</a>
@@ -107,14 +97,13 @@
             </ul>
             <ul class="sort-list"> 
               <li class="sort">
-                <a class="sort-up" href="#">Сортировка1</a>
+                <a class="sort-up" href="#"><p class="visually-hidden">Сортировка по возрастанию</p></a>
               </li>
               <li class="sort">
-                <a class="sort-down" href="#">Сортировка2</a>
+                <a class="sort-down active" href="#"><p class="visually-hidden">Сортировка по убыванию</p></a>
               </li>
             </ul> 
           </div>
-          <h2 class="visually-hidden">Список гостиниц</h2>
           <ul class="hotels-list">
             <li class="hotel">
               <h3 class="hotel-name"><a class="hotel-link" href="#">Amara Resort &amp; SPA</a></h3>
@@ -168,9 +157,33 @@
           <a class="footer-phone" href="tel:+74956660166">тел: +7(495)66-01-66</a>
         </div>
         <ul class="footer-social">
-          <li><a class="social-button" href="blank.html">Twitter</a></li>
-          <li><a class="social-button" href="blank.html">Facebook</a></li>
-          <li><a class="social-button" href="blank.html">Youtube</a></li>
+          <li class="social-item">
+            <a class="social-button" href="blank.html">
+              <p class="visually-hidden">Twitter</p>
+              <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="46" height="48" fill="#81B3D2"/>
+                <path d="M25.95 17.1441C27.635 16.6481 28.934 17.4141 29.527 18.3231C30.2 18.0921 30.858 17.8421 31.538 17.6151C31.5249 18.3015 31.2117 18.9476 30.681 19.3831C31.366 19.5531 31.985 18.8921 31.985 18.8921C31.816 19.8921 30.979 20.6801 30.422 20.9161C30.191 27.6661 27.247 32.1331 20.345 31.9981H19.899C19.489 31.9981 15.735 31.5381 15.001 30.1111C17.272 30.3071 18.894 29.6891 19.694 28.9341C18.734 28.6341 17.015 28.4571 16.715 25.9841C17.064 26.0901 17.279 26.2121 17.905 26.1031C16.705 25.2471 15.374 24.5301 15.448 22.3301C15.733 22.6581 16.515 22.8661 16.788 22.8021C16.085 22.5611 14.818 19.4421 15.894 17.8501C17.712 19.7041 19.629 21.4561 23.046 21.6231C23.254 19.3301 24.183 17.7931 25.95 17.1441Z" fill="white"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-button" href="blank.html">
+              <p class="visually-hidden">Facebook</p>
+              <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="46" height="48" fill="#81B3D2"/>
+                <path d="M29 17V13H25C22.7909 13 21 14.7909 21 17V21H17V25H21V35H25V25H29V21H25V17H29Z" fill="white"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-button" href="blank.html">
+              <p class="visually-hidden">Youtube</p>
+              <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="46" height="48" fill="#81B3D2"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16H30C31.65 16 33 17.35 33 19V29C33 30.65 31.65 32 30 32H16C14.35 32 13 30.65 13 29V19C13 17.35 14.35 16 16 16ZM19.027 20.002V27.998L28.014 24L19.027 20.002Z" fill="white"/>
+              </svg>
+            </a>
+          </li>
         </ul>
         <div class="footer-logo">
           <p class="text-copyright">Website by</p>
