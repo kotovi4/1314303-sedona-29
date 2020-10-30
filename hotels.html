@@ -28,21 +28,20 @@
         <h1 class="visually-hidden">Страница выбора отелей</h1>
         
         <form class="filter-form" action="http://echo.htmlacademy.ru/" method="get">
-          
           <fieldset class="filter-group">
               <legend class="name-title">Инфраструктура:</legend>
               <ul class="group-list">
                 <li class="group-item">
-                  <label for="pool-field">Бассейн</label>
                   <input class="visually-hidden filter-checkbox" type="checkbox" id="pool-field" name="area" value="pool-field" checked>
+                  <label for="pool-field">Бассейн</label>
                 </li>
                 <li class="group-item">
-                  <label for="parking-field">Парковка</label>
                   <input class="visually-hidden filter-checkbox" type="checkbox" id="parking-field" name="area" value="parking-field">
+                  <label for="parking-field">Парковка</label>
                 </li>
                 <li class="group-item">
-                  <label for="wifi-field">Wi-Fi</label>
                   <input class="visually-hidden filter-checkbox" type="checkbox" id="wifi-field" name="area" value="ifi-field">
+                  <label for="wifi-field">Wi-Fi</label>
                 </li>
               </ul>
           </fieldset>
@@ -51,16 +50,16 @@
               <legend class="name-title">Тип жилья:</legend>
               <ul class="group-list">
                 <li class="group-item">
-                  <label for="hotel-field">Гостиница</label>
                   <input class="visually-hidden filter-checkbox" type="checkbox" id="hotel-field" name="area" value="hotel-field" checked>
+                  <label for="hotel-field">Гостиница</label>
                 </li>
                 <li class="group-item">
+                  <input class="visually-hidden filter-checkbox" type="checkbox" id="motel-field" name="area" value="motel-field" checked>
                   <label for="motel-field">Мотель</label>
-                  <input class="visually-hidden filter-checkbo" type="checkbox" id="motel-field" name="area" value="motel-field" checked>
                 </li>
                 <li class="group-item">
-                  <label for="apartments-field">Аппартаменты</label>
                   <input class="visually-hidden filter-checkbox" type="checkbox" id="apartments-field" name="area" value="apartments-field" checked>
+                  <label for="apartments-field">Аппартаменты</label>
                 </li>
               </ul>
           </fieldset>
@@ -74,6 +73,15 @@
               <label class="max-price">до
                 <input type="number" name="max-price" value="3000">
               </label>
+            </div>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
             </div>
             <button class="button-hotels" type="submit" name="button-hotels">Показать</button>
           </fialdset>
@@ -110,8 +118,8 @@
               <a class="image-link" href="#">
                 <img class="hotel-image" src="img/photo-armada-hotel.jpg" width="135" height="90" alt="Гостиница Amara Resort &amp; SPA">
               </a>
-              <div class="hotel-wrap">
-                <div class="hotel-info">
+              <div class="hotel-info">
+                <div class="hotel-wrap">
                   <h3 class="hotel-name">
                     <a class="hotel-link" href="#">Amara Resort &amp; SPA</a>
                   </h3>
@@ -139,8 +147,8 @@
               <a class="image-link" href="#">
                 <img class="hotel-image" src="img/photo-desert-motel.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
               </a>
-              <div class="hotel-wrap">
-                <div class="hotel-info">
+              <div class="hotel-info">
+                <div class="hotel-wrap">
                   <h3 class="hotel-name">
                     <a class="hotel-link" href="#">Desert Quail Inn</a>
                   </h3>
@@ -168,8 +176,8 @@
               <a class="image-link" href="#">
                 <img class="hotel-image" src="img/photo-villas-apparts.jpg" width="135" height="90" alt="Аппартаменты Villas at Poco Diablo">
               </a>
-              <div class="hotel-wrap">
-                <div class="hotel-info">
+              <div class="hotel-info">
+                <div class="hotel-wrap">
                   <h3 class="hotel-name">
                     <a class="hotel-link" href="#">Villas at Poco Diablo</a>
                   </h3>
