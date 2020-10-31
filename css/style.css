@@ -1,5 +1,3 @@
-/* Variables */
-
 :root {
   --base-white: #ffffff;
   --black-title: #000000;
@@ -12,7 +10,7 @@
   --base-blue: #81b3d2;
   --form-blue: #7aa8cb;
   --detail-hover-color: #669ec0;
-  --detail-activ-color: #5496bd;
+  --detail-active-color: #5496bd;
   --base-brown: #766357;
   --search-hover-color:  #604e43;
   --search-active-color: #503e33;
@@ -24,6 +22,7 @@
   --line-module-color: #e5e5e5;
   --active-footer-logo: #bdbbbc;
   --shadow-color: rgba(0, 1, 1, 0.2);
+  --shadow-search-color: rgba(0, 1, 1, 0.15);
 }
 
 /*Global */
@@ -128,28 +127,26 @@ a {
 
 /* Main */
 
-.welcome-container {
+.welcome-background {
   position: relative;
   width: 1200px;
-  height: 509px;
+  min-height: 509px;
   background-color: var(--blue-120);
   background-image: url("../img/photo-welcome-background.jpg");
+  background-color: var(--form-blue);
 }
 
-.welcome-container::after {
+.welcome-background img {
+  transform: translateX(-50%);
+  top: 58px;
+  left: 50%;
   position: absolute;
   content: "";
   z-index: 1;
-  top: 58px;
-  left: 50%;
-  width: 457px;
-  height: 351px;
-  transform: translateX(-50%);
-  background-image: url("../img/welcome.svg");
   background-repeat: no-repeat;
 }
 
-.welcome-container::before {
+.welcome-background::before {
   position: absolute;
   content: "";
   z-index: 1;
@@ -303,7 +300,6 @@ a {
   color: var(--base-black);
 }
 
-
 .feature-number {
   color: var(--base-black);
 }
@@ -361,6 +357,43 @@ a {
   color: var(--transparent-black);
 }
 
+.search-form {
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 568px;
+  padding: 55px;
+  box-sizing: border-box;
+  background-color: var(--base-white);
+  top: 305px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 7px 15px var(--shadow-search-color);
+}
+
+.field-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin-top: 29px;
+  margin-bottom: 0;
+}
+
+.field-wrap:first-child {
+  margin-top: 0;
+}
+
+.field-wrap button {
+  padding: 0;
+}
+
+
+
 /* Hotels form */
 
 .filter-form {
@@ -368,12 +401,13 @@ a {
   flex-wrap: wrap;
   padding-top: 27px;
   padding-left: 72px;
-  padding-right: 73px;
+  padding-right: 72px;
   padding-bottom: 31px;
   box-sizing: border-box;
   background-image: url("../img/photo-filter-background.jpg");
   background-color: var(--form-blue);
   min-height: 217px;
+  background-size: cover;
 }
 
 .filter-group {
@@ -382,9 +416,9 @@ a {
 
 .filter-group,
 .filter-price {
-  border: none;
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 .name-title {
@@ -486,7 +520,14 @@ a {
 .min-price,
 .max-price {
   width: 50%;
-  padding-left: 60px;
+}
+
+.min-price {
+  padding-left: 66px;
+}
+
+.max-price {
+  padding-right: 42px;
 }
 
 .range-filter {
@@ -527,23 +568,21 @@ a {
 }
 
 .range-controls .toggle-max {
-  left: 260px;
+  left: 255px;
 }
 
 .button-hotels {
   display: block;
   width: 137px;
-  margin-top: 33px;
+  margin-top: 32px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 35px;
-  padding-left: 35px;
+  padding: 5px 35px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   border: 1px solid var(--base-white);
+  border-radius: 2px;
   background: none;
   color: var(--base-white);
   text-transform: uppercase;
@@ -795,7 +834,8 @@ a {
   color: var(--rating-color);
   background-color: var(--rating-bg);
 }
-/* button */
+
+/* Button */
 
 .button {
   font-weight: 700;
@@ -825,7 +865,7 @@ a {
 }
 
 .button-detail:active {
-  background-color: var(--detail-activ-color);
+  background-color: var(--detail-active-color);
 }
 
 .button-detail,
@@ -899,7 +939,7 @@ a {
   align-items: center;
   width: 46px;
   height: 48px;
-  background-color: var(--base-blue)
+  background-color: var(--base-blue);
 }
 
 .social-button:hover {
@@ -907,7 +947,7 @@ a {
 }
 
 .social-button:active {
-  background-color: var(--detail-activ-color);
+  background-color: var(--detail-active-color);
 }
 
 .social-button:active svg {
