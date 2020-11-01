@@ -25,11 +25,10 @@
       </header>
     
       <main class="container">
-        
-        <section class="welcome-container">
-          <h1 class="visually-hidden">Главная страница сайта "Седоны"</h1>
+        <h1 class="visually-hidden ">Главная страница сайта "Седоны"</h1>
+        <section class="welcome-background">
+          <img src="img/welcome.svg" width="457" height="351" alt="Добро пожаловать в Седону!">
         </section>
-        
         <section class="features-intro">
           <h2 class="visually-hidden">Описание города Седона</h2>
           <p class="intro-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
@@ -97,36 +96,93 @@
           <b class="search-title">Заинтересовались?</b>
           <p class="search-text">Укажите предполагаемые даты поездки,<br/> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="search-button" href="#">Поиск гостиницы в Седоне</a>
+          
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <p class="field-wrap">
+              <label class="check-in" for="check-in">Дата заезда:</label>
+              <input class="date-picker" id="check-in" type="text" name="check-in" value="24 апреля 2017" required>
+              <button class="calendar" type="button" name="calendar"><span class="visually-hidden">Календарь для выбора даты заезда</span>
+                <svg aria-hidden="true" focusable="false" class="form-icon" width="21" height="23"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.4 3h2.9c1 0 1.7.8 1.7 1.9v16.3c0 1-.8 1.8-1.7 1.8H1.7c-1 0-1.7-.8-1.7-1.8V4.9C0 3.9.8 3 1.8 3h2.8V1.6c0-.3.3-.6.7-.6.3 0 .6.3.6.6V3h4V1.6c0-.3.2-.6.6-.6.4 0 .7.3.7.6V3H15V1.6c0-.3.3-.6.7-.6.3 0 .6.3.6.6V3zm3.2 18.5V4.9c0-.3-.1-.5-.3-.5h-2.9v1.4c0 .4-.3.7-.6.7a.7.7 0 01-.7-.7V4.4h-4v1.4c0 .4-.2.7-.6.7a.7.7 0 01-.7-.7V4.4H6v1.4c0 .4-.3.7-.6.7a.7.7 0 01-.7-.7V4.4H1.8c-.3 0-.5.2-.5.5v16.3c0 .2.2.4.4.4h17.6l.3-.1z" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.6 9.2h2.6v2H4.6v-2zm0 3.5h2.6v2H4.6v-2zM7.2 16H4.6v2h2.6v-2zm2 0h2.6v2H9.2v-2zm2.6-3.4H9.2v2h2.6v-2zM9.2 9.2h2.6v2H9.2v-2zm7.2 7h-2.6v2h2.6v-2zm-2.6-3.5h2.6v2h-2.6v-2zm2.6-3.5h-2.6v2h2.6v-2z" />
+                </svg>
+              </button>
+            </p>
+
+            <p class="field-wrap">
+              <label class="check-out" for="check-out">Дата выезда:</label>
+              <input class="date-picker" id="check-out" type="text" name="check-out" value="4 июля 2017" required>
+              <button class="calendar" type="button" name="calendar"><span class="visually-hidden">Календарь для выбора даты выезда</span>
+                <svg aria-hidden="true" focusable="false" class="form-icon" width="21" height="23"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.4 3h2.9c1 0 1.7.8 1.7 1.9v16.3c0 1-.8 1.8-1.7 1.8H1.7c-1 0-1.7-.8-1.7-1.8V4.9C0 3.9.8 3 1.8 3h2.8V1.6c0-.3.3-.6.7-.6.3 0 .6.3.6.6V3h4V1.6c0-.3.2-.6.6-.6.4 0 .7.3.7.6V3H15V1.6c0-.3.3-.6.7-.6.3 0 .6.3.6.6V3zm3.2 18.5V4.9c0-.3-.1-.5-.3-.5h-2.9v1.4c0 .4-.3.7-.6.7a.7.7 0 01-.7-.7V4.4h-4v1.4c0 .4-.2.7-.6.7a.7.7 0 01-.7-.7V4.4H6v1.4c0 .4-.3.7-.6.7a.7.7 0 01-.7-.7V4.4H1.8c-.3 0-.5.2-.5.5v16.3c0 .2.2.4.4.4h17.6l.3-.1z" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.6 9.2h2.6v2H4.6v-2zm0 3.5h2.6v2H4.6v-2zM7.2 16H4.6v2h2.6v-2zm2 0h2.6v2H9.2v-2zm2.6-3.4H9.2v2h2.6v-2zM9.2 9.2h2.6v2H9.2v-2zm7.2 7h-2.6v2h2.6v-2zm-2.6-3.5h2.6v2h-2.6v-2zm2.6-3.5h-2.6v2h2.6v-2z" />
+                </svg>
+              </button>
+            </p>
+
+            <p class="field-wrap field-guests">
+              <label class="guests" for="guests">Взрослые:</label>
+              <button class="minus" type="button" name="minus"><span class="visually-hidden">Минус</span>
+                <svg aria-hidden="true" focusable="false" class="form-icon" width="12" height="3"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h12v3H0z" />
+                </svg>
+              </button>
+              <input class="counter adults" id="guests" type="text" name="adults" value="2" required>
+              <button class="plus" type="button" name="plus"><span class="visually-hidden">Плюс</span>
+                <svg aria-hidden="true" focusable="false" class="form-icon" width="11" height="11" viewBox="0 0 11 11"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" />
+                </svg>
+              </button>
+            </p>
+
+            <p class="field-wrap field-guests">
+              <label class="guests children" for="guests-children">Дети:</label>
+              <button class="minus" type="button" name="minus"><span class="visually-hidden">Минус</span>
+                <svg aria-hidden="true" focusable="false" class="form-icon" width="12" height="3"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h12v3H0z" />
+                </svg>
+              </button>
+              <input class="counter children" id="guests-children" type="text" name="children" value="0" required>
+              <button class="plus" type="button" name="plus"><span class="visually-hidden">Плюс</span>
+                <svg aria-hidden="true" focusable="false" class="form-icon" width="11" height="11" viewBox="0 0 11 11"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" />
+                </svg>
+              </button>
+            </p>
+
+            <button class="button-find hotel-button-about" type="submit">Найти</button>
+            
+          </form>
         </section>
-          <!-- Форма поиска гостиницы 
-          <form action="#" method="get">
-            <fieldset>
-              <ul>
-                <li>
-                  <label for="">Дата заезда:</label>
-                  <input type="date" name="" id="">
-                </li>
-                <li>
-                  <label for="">Дата выезаезда:</label>
-                  <input type="date" name="" id="">
-                </li>
-              </ul
-            </fieldset>
-          -->        
+
         <section class="map">
           <h2 class="visually-hidden">Как до нас добраться</h2>
-          <img src="img/map.png" alt="США, Штат Аризона, город Седона">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.1805059656!2d-111.8301579376281!3d34.85437338104937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1604153713111!5m2!1sru!2sru" width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="США, Штат Аризона, город Седона" aria-hidden="false" tabindex="0"></iframe>
+          <!-- <img src="img/map.png" alt="США, Штат Аризона, город Седона"> -->
         </section>
+
       </main>
       <footer class="main-footer">
         <div class="footer-contacts">
           <p class="footer-hashtag">#visitsedona</p>
-          <p class="footer-phone">тел:<a href="tel:+74956660166">+7(495)66-01-66</a></p>
+          <a class="footer-phone" href="tel:+74956660166">тел: +7(495)66-01-66</a>
         </div>
         <ul class="footer-social">
           <li class="social-item">
             <a class="social-button" href="blank.html">
-              <p class="visually-hidden">Twitter</p>
+              <span class="visually-hidden">Twitter</span>
               <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="46" height="48" fill="#81B3D2"/>
                 <path d="M25.95 17.1441C27.635 16.6481 28.934 17.4141 29.527 18.3231C30.2 18.0921 30.858 17.8421 31.538 17.6151C31.5249 18.3015 31.2117 18.9476 30.681 19.3831C31.366 19.5531 31.985 18.8921 31.985 18.8921C31.816 19.8921 30.979 20.6801 30.422 20.9161C30.191 27.6661 27.247 32.1331 20.345 31.9981H19.899C19.489 31.9981 15.735 31.5381 15.001 30.1111C17.272 30.3071 18.894 29.6891 19.694 28.9341C18.734 28.6341 17.015 28.4571 16.715 25.9841C17.064 26.0901 17.279 26.2121 17.905 26.1031C16.705 25.2471 15.374 24.5301 15.448 22.3301C15.733 22.6581 16.515 22.8661 16.788 22.8021C16.085 22.5611 14.818 19.4421 15.894 17.8501C17.712 19.7041 19.629 21.4561 23.046 21.6231C23.254 19.3301 24.183 17.7931 25.95 17.1441Z" fill="white"/>
@@ -135,7 +191,7 @@
           </li>
           <li class="social-item">
             <a class="social-button" href="blank.html">
-              <p class="visually-hidden">Facebook</p>
+              <span class="visually-hidden">Facebook</span>
               <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="46" height="48" fill="#81B3D2"/>
                 <path d="M29 17V13H25C22.7909 13 21 14.7909 21 17V21H17V25H21V35H25V25H29V21H25V17H29Z" fill="white"/>
@@ -144,7 +200,7 @@
           </li>
           <li class="social-item">
             <a class="social-button" href="blank.html">
-              <p class="visually-hidden">Youtube</p>
+              <span class="visually-hidden">Youtube</span>
               <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="46" height="48" fill="#81B3D2"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16H30C31.65 16 33 17.35 33 19V29C33 30.65 31.65 32 30 32H16C14.35 32 13 30.65 13 29V19C13 17.35 14.35 16 16 16ZM19.027 20.002V27.998L28.014 24L19.027 20.002Z" fill="white"/>
