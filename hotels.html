@@ -5,7 +5,7 @@
     <title>Поиск гостиницы | Сайт Седона</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="page-body">
@@ -40,7 +40,7 @@
                   <label for="parking-field">Парковка</label>
                 </li>
                 <li class="group-item">
-                  <input class="visually-hidden filter-checkbox" type="checkbox" id="wifi-field" name="area" value="ifi-field">
+                  <input class="visually-hidden filter-checkbox" type="checkbox" id="wifi-field" name="area" value="wifi-field">
                   <label for="wifi-field">Wi-Fi</label>
                 </li>
               </ul>
@@ -137,6 +137,7 @@
                     <li class="star"></li>
                     <li class="star"></li>
                     <li class="star"></li>
+                    <li class="star"></li>
                   </ul>
                   <p class="hotel-rating">Рейтинг: 8,5 </p>
                 </div>  
@@ -204,7 +205,7 @@
         </section>
       </main>
     
-      <footer class="main-footer">
+      <footer class="main-footer hotels-footer">
         <div class="footer-contacts">
           <p class="footer-hashtag">#visitsedona</p>
           <a class="footer-phone" href="tel:+74956660166">тел: +7(495)66-01-66</a>
@@ -213,27 +214,26 @@
           <li class="social-item">
             <a class="social-button" href="blank.html">
               <span class="visually-hidden">Twitter</span>
-              <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="46" height="48" fill="#81B3D2"/>
-                <path d="M25.95 17.1441C27.635 16.6481 28.934 17.4141 29.527 18.3231C30.2 18.0921 30.858 17.8421 31.538 17.6151C31.5249 18.3015 31.2117 18.9476 30.681 19.3831C31.366 19.5531 31.985 18.8921 31.985 18.8921C31.816 19.8921 30.979 20.6801 30.422 20.9161C30.191 27.6661 27.247 32.1331 20.345 31.9981H19.899C19.489 31.9981 15.735 31.5381 15.001 30.1111C17.272 30.3071 18.894 29.6891 19.694 28.9341C18.734 28.6341 17.015 28.4571 16.715 25.9841C17.064 26.0901 17.279 26.2121 17.905 26.1031C16.705 25.2471 15.374 24.5301 15.448 22.3301C15.733 22.6581 16.515 22.8661 16.788 22.8021C16.085 22.5611 14.818 19.4421 15.894 17.8501C17.712 19.7041 19.629 21.4561 23.046 21.6231C23.254 19.3301 24.183 17.7931 25.95 17.1441Z" fill="white"/>
+              <svg aria-hidden="true" focusable="false" width="17px" height="17px" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1.1c1.6-.5 3 .3 3.5 1.2l2-.7c0 .7-.3 1.3-.8 1.8.7.2 1.3-.5 1.3-.5a3 3 0 01-1.6 2c-.2 6.8-3.2 11.2-10 11.1h-.5c-.4 0-4.2-.5-4.9-1.9 2.3.2 3.9-.4 4.7-1.2-1-.3-2.7-.4-3-3 .4.2.6.3 1.2.2C1.7 9.2.4 8.5.4 6.3c.3.4 1.1.6 1.4.5-.7-.2-2-3.4-1-5 2 1.9 3.8 3.7 7.2 3.8.3-2.3 1.2-3.8 3-4.5z" fill="#fff" />
               </svg>
             </a>
           </li>
           <li class="social-item">
             <a class="social-button" href="blank.html">
               <span class="visually-hidden">Facebook</span>
-              <svg aria-hidden="true" focusable="false" width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="46" height="48" fill="#81B3D2"/>
-                <path d="M29 17V13H25C22.7909 13 21 14.7909 21 17V21H17V25H21V35H25V25H29V21H25V17H29Z" fill="white"/>
-              </svg>
+              <svg aria-hidden="true" focusable="false" width="12" height="22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff" /></svg>
             </a>
           </li>
           <li class="social-item">
             <a class="social-button" href="blank.html">
               <span class="visually-hidden">Youtube</span>
-              <svg aria-hidden="true" focusable="false" width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="46" height="48" fill="#81B3D2"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16H30C31.65 16 33 17.35 33 19V29C33 30.65 31.65 32 30 32H16C14.35 32 13 30.65 13 29V19C13 17.35 14.35 16 16 16ZM19.027 20.002V27.998L28.014 24L19.027 20.002Z" fill="white"/>
+              <svg aria-hidden="true" focusable="false" width="20" height="16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h14a3 3 0 013 3v10a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm3 4v8l9-4-9-4z" fill="#fff" />
               </svg>
             </a>
           </li>
