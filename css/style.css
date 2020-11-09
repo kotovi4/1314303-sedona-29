@@ -1,9 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 2 version,not dead,not ie <= 11
-*/
+
 
 :root {
 	--base-white: #ffffff;
@@ -380,12 +375,12 @@ a {
 /* Search form */
 
 .search-form {
-	display: none;
+	display: flex;
 	flex-wrap: wrap;
 	position: absolute;
 	width: 568px;
 	padding: 55px;
-	padding-bottom: 54px;
+	padding-bottom: 53px;
 	box-sizing: border-box;
 	background-color: var(--base-white);
 	align-items: center;
@@ -394,7 +389,6 @@ a {
 	left: 50%;
 	transform: translate(-50%);
 	box-shadow: 0px 7px 15px var(--shadow-search-color);
-	z-index: 2;
 }
 
 .show-form {
@@ -678,7 +672,7 @@ input.counter::placeholder {
 
 .filter-price {
 	width: 50%;
-	padding-left: 217px;
+	padding-left: 229px;
 	box-sizing: border-box;
 }
 
@@ -691,7 +685,7 @@ input.counter::placeholder {
 
 .group-item {
 	margin-top: 25px;
-	padding-left: 38px;
+	padding-left: 40px;
 }
 
 .group-item label {
@@ -1148,6 +1142,10 @@ input.counter::placeholder {
 
 .map {
 	background-image: url("../img/map.jpg");
+}
+
+.map iframe {
+	border-style: none;
 }
 
 /* Footer */  
