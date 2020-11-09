@@ -16,6 +16,7 @@ try {
 
 searchButton.addEventListener('click', function(evt) {
   evt.preventDefault();
+  form.classList.remove('show-form');
   form.classList.toggle('show-form');
   form.classList.add('show-form');
 });
