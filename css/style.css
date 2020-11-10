@@ -376,7 +376,7 @@ a {
 
 .search-form {
 	position: absolute;
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
@@ -438,11 +438,11 @@ a {
 }
 
 input.date-picker::-webkit-input-placeholder, input.counter::-webkit-input-placeholder {
-	color: var(--base-black);
-	font-family:  "PT Sans", "Arial", sans-serif;;
+	font-family:  "PT Sans", "Arial", sans-serif;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 26px;
+	color: var(--base-black);
 }
 
 input.date-picker::-moz-placeholder, input.counter::-moz-placeholder {
@@ -455,8 +455,9 @@ input.counter::placeholder {
 }
 
 .date-picker,
-.search-form,
-.counter {
+.counter,
+.search-form {
+	font-family:  "PT Sans", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: 700;
@@ -474,7 +475,6 @@ input.counter::placeholder {
 .date-picker:focus,
 .counter:focus {
 	background-color: var(--base-white);
-	border: 2px solid var(--line-module-color);
 	box-sizing: border-box;
 }
 
@@ -880,7 +880,6 @@ input[type=number] {
 	line-height: 18px;
 	text-decoration: none;
 	color: var(--navigation-active-color);
-	/* border-bottom: 1px dashed var(--base-blue); */
 }
 
 .filter-name:hover {
@@ -890,21 +889,22 @@ input[type=number] {
 .filter-name.active,
 .filter-name:active {
 	color: var(--base-black);
-}
-
+	text-decoration: none;
+} 
 
 .filter-name.active,
 .filter-name.active:hover,
 .filter-name.active:focus {
-	color: var(--base-blue)
+	color: var(--base-blue);
 }
 
 .filter-name.passive {
 	border-bottom: 1px dashed var(--base-blue);
-	/* color: var(--navigation-active-color);
-	opacity: 0.3; */
 }
 
+.filter-name.passive:active {
+	border: 0;
+}
 
 .filters-wrap {
 	display: flex;
@@ -1182,7 +1182,7 @@ input[type=number] {
 
 .footer-contacts {
 	margin-left: 72px;
-	margin-bottom: 21px;
+	margin-bottom: 20px;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
