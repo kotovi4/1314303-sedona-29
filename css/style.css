@@ -15,7 +15,7 @@
 	--search-hover-color:  #604e43;
 	--search-active-color: #503e33;
 	--footer-bg: rgba(255, 255, 255, 0.9);
-	--navigation-active-color: rgba (0, 0, 0, 0.3);
+	--navigation-active-color: rgba(0, 0, 0, 0.3);
 	--transparent-white: rgba(255, 255, 255, 0.3);
 	--rating-color: #666666;
 	--toggle-color: #ababab;
@@ -365,8 +365,10 @@ a {
 }
 
 .search-text {
+	width: 435px;
 	margin-top: 28px;
-	margin-bottom: 0;
+	margin-left: 383px;
+	margin-bottom: 5px;
 	line-height: 24px;
 }
 
@@ -379,7 +381,7 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	transform: translate(-50%);
-	top: 291px;
+	top: 292px;
 	left: 50%;
 	width: 568px;
 	padding: 55px;
@@ -392,31 +394,17 @@ a {
 .show-form {
 	display: flex;
 	-webkit-animation-name: slide-down;
-			animation-name: slide-down;
+	animation-name: slide-down;
 	-webkit-animation-duration:  0.6s;
-			animation-duration:  0.6s;
-}
+	animation-duration:  0.6s;
+  }
+  
 
 .search-form-error {
 	-webkit-animation-name: shake;
 			animation-name: shake;
 	-webkit-animation-duration: 0.6s;
 			animation-duration: 0.6s;
-}
-
-.search-form .button-find {
-	width: 100%;
-	margin-top: 57px;
-	padding-top: 10px;
-	padding-bottom: 16px;
-	font-size: 14px;
-	line-height: 26px;
-	font-weight: 700;
-	color: var(--base-white);
-	text-decoration: none;
-	background-color: var(--base-blue);
-	border: none;
-	text-transform: uppercase;
 }
 
 .field-wrap {
@@ -441,8 +429,8 @@ a {
 .date-picker {
 	width: 346px;
 	min-height: 38px;
-	padding-top: 4px;
-	padding-bottom: 6px;
+	padding-top: 3px;
+	padding-bottom: 5px;
 	padding-left: 13px;
 	text-transform: uppercase;
 	border: none;
@@ -582,7 +570,7 @@ input.counter::placeholder {
 	display: inline-block;
 	vertical-align: top;
 	width: 568px;
-	margin-top: 46px;
+	margin-top: 40px;
 	padding: 30px;
 	font-size: 21px;
 	line-height: 26px;
@@ -597,13 +585,13 @@ input.counter::placeholder {
 
 .search-button:active {
 	background-color: var(--search-active-color);
-	color: var(--transparent-black);
+	color: var(--navigation-active-color);
 }
 
 .search-form .button-find {
 	width: 100%;
 	margin-top: 54px;
-	padding-top: 15px;
+	padding-top: 16px;
 	padding-bottom: 17px;
 	font-size: 21px;
 	line-height: 26px;
@@ -636,7 +624,7 @@ input.counter::placeholder {
 .button-booking {
 	margin-top: 13px;
 	padding-top: 3px;
-	padding-right: 16px;
+	padding-right: 17px;
 	padding-bottom: 3px;
 	padding-left: 17px;
 }
@@ -825,6 +813,18 @@ input.counter::placeholder {
 	left: 255px;
 }
 
+/* Стрелки */
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    /* margin: 0; */
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .button-hotels {
 	display: block;
 	width: 137px;
@@ -879,17 +879,8 @@ input.counter::placeholder {
 	font-size: 12px;
 	line-height: 18px;
 	text-decoration: none;
-	border-bottom: 1px dashed var(--base-blue);
-}
-
-.filter-name.passive {
 	color: var(--navigation-active-color);
-	opacity: 0.3;
-}
-
-.filter-name.active {
-	border: none;
-	color: var(--base-black);
+	/* border-bottom: 1px dashed var(--base-blue); */
 }
 
 .filter-name:hover {
@@ -897,11 +888,23 @@ input.counter::placeholder {
 }
 
 .filter-name.active,
+.filter-name:active {
+	color: var(--base-black);
+}
+
+
+.filter-name.active,
 .filter-name.active:hover,
-.filter-name.active:focus,
-.filter-name.active:active {
+.filter-name.active:focus {
 	color: var(--base-blue)
 }
+
+.filter-name.passive {
+	border-bottom: 1px dashed var(--base-blue);
+	/* color: var(--navigation-active-color);
+	opacity: 0.3; */
+}
+
 
 .filters-wrap {
 	display: flex;
@@ -1055,7 +1058,7 @@ input.counter::placeholder {
 	font-weight: 700;
 	margin: 0px;
 	padding: 0px;
-	color: var(--base-title);
+	color: var(--black-title);
 	text-decoration: none;
 }
 
@@ -1197,7 +1200,7 @@ input.counter::placeholder {
 }
 
 .footer-hashtag {
-	margin-top: 4px;
+	margin-top: 3px;
 	margin-bottom: 7px;
 	color: var(--black-title);
 }
@@ -1272,46 +1275,42 @@ input.counter::placeholder {
 
 @-webkit-keyframes slide-down {
 	0% {
-		top: -2000px;
+	  top: -2000px;
 	}
-
+  
 	100% {
-		top: 305px;
+	  top: 305px;
 	}
-}
-
-@keyframes slide-down {
+  }
+  
+  @keyframes slide-down {
 	0% {
-		top: -2000px;
+	  top: -2000px;
 	}
-
+  
 	100% {
-		top: 293px;
+	  top: 293px;
 	}
-}
-
-@-webkit-keyframes shake {
+  }
+  
+  @-webkit-keyframes shake {
 	0%, 100% {
-		left: 50%;
-		transform: translateX(-50%);
-	} 
-	10%, 30%, 50%, 70%, 90% {
+	  left: 50%;
+	  transform: translateX(-50%);
+	} 10%, 30%, 50%, 70%, 90% {
 		left: 48%;
-	} 
-	20%, 40%, 60%, 80% {
-			left: 52%;
+	  } 20%, 40%, 60%, 80% {
+		  left: 52%;
 		}
-}
-
-@keyframes shake {
+  }
+  
+  @keyframes shake {
 	0%, 100% {
-		left: 50%;
-		transform: translateX(-50%);
-	} 
-	10%, 30%, 50%, 70%, 90% {
+	  left: 50%;
+	  transform: translateX(-50%);
+	} 10%, 30%, 50%, 70%, 90% {
 		left: 48%;
-	} 
-	20%, 40%, 60%, 80% {
-			left: 52%;
-	}
-}
+	  } 20%, 40%, 60%, 80% {
+		  left: 52%;
+		}
+  }
