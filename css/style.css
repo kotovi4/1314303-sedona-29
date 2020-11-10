@@ -1149,6 +1149,8 @@ input.counter::placeholder {
 	padding-right: 17px;
 }
 
+/* Map */
+
 .map {
 	background-image: url("../img/map.jpg");
 }
